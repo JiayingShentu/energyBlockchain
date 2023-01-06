@@ -9,6 +9,7 @@ contract energyTrade{
     User[] users;
     mapping (address => string) name;  // the same as User.userName
     mapping (address => int) identity; // 0:power grid, 1:PV, 2:energy storage, 3:charging station
+    mapping (address => uint) balance; // 记录余额
     
     struct Sell {
         address seller;
@@ -50,6 +51,7 @@ contract energyTrade{
         users.push(User(msg.sender, _userName));
         name[msg.sender] = _userName;
         identity[msg.sender] = _userType;
+        balance[msg.sender] = 0; // 注册时余额初始值为 0
 
         return ("Registration successful!");
     }
@@ -255,4 +257,20 @@ contract energyTrade{
 
         return (sellerName, sellingPrice, sellingAmount, buyerName, buyingPrice, buyingAmount);
     }
+
+    //充值
+    function deposit() public payable {
+        //nothing to do
+        balance[msg.sender] =  balance[msg.sender]+msg.value;
+    }
+
+    // 获取余额
+    function getBalance(address _userAddr) public view returns (string memory, int) {
+        for (uint i = 0; i < users.length; ++i) {
+            if (users[i].addr == _userAddr)
+                return (name[_userAddr], balance[_userAddr]);
+        }
+        return ("User not registered.", 3);
+    }
+    
 }

@@ -1,0 +1,175 @@
+[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "auctionInquiry",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string[]"
+			},
+			{
+				"name": "",
+				"type": "string[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_amount",
+				"type": "int256"
+			},
+			{
+				"name": "_kind",
+				"type": "int256"
+			}
+		],
+		"name": "marketOrder",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "int256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "enterNextPeriod",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_userAddr",
+				"type": "address"
+			}
+		],
+		"name": "getName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "int256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_price",
+				"type": "int256"
+			},
+			{
+				"name": "_amount",
+				"type": "int256"
+			},
+			{
+				"name": "_kind",
+				"type": "int256"
+			}
+		],
+		"name": "limitOrder",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_userName",
+				"type": "string"
+			},
+			{
+				"name": "_userType",
+				"type": "int256"
+			}
+		],
+		"name": "createAccount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "pendingList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			},
+			{
+				"name": "",
+				"type": "string[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			},
+			{
+				"name": "",
+				"type": "int256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	}
+]
